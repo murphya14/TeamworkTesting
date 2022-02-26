@@ -10,7 +10,7 @@ module.exports = async () => {
   await page.click('button:has-text("Log in")');
 
   await page.fill('input[type="text"]', "aislingmurpy14@qad.com");
-  await page.fill('input[type="password"]', "Test123");
+  await page.fill('input[type="password"]', "teamwork123");
   await page.click('button:has-text("Log in")');
 
   await page.context().storageState({ path: 'tests/state.json' });

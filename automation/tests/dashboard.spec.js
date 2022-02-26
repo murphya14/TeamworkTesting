@@ -1,7 +1,9 @@
 const { test, expect } = require('@playwright/test');
 
+test.use({ storageState: 'tests/state.json' });
+
 test('dashboard', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-  const title = page.locator('.navbar__inner .navbar__title');
-  await expect(title).toHaveText('Playwright');
+  await page.goto('');
+  const title = await page.locator('.task-table-blank-icon');
+  await expect(title).toContainText('Access your recent projects!');
 });
