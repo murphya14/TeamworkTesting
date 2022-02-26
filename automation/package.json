@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.19.2",
-    "playwright": "^1.19.2",
-  "test": "npx playwright test", 
-  "test-debug": "PWDEBUG=1 npx playwright test", 
-  "test-debug-windows": "set PWDEBUG=1 && npx playwright test" 
-  }
+    "playwright": "^1.19.2"},
+  "scripts": { 
+    "test": "npx playwright test", 
+    "test-debug": "PWDEBUG=1 npx playwright test", 
+    "test-debug-windows": "set PWDEBUG=1 && npx playwright test"}
 }
