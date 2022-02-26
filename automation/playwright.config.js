@@ -32,6 +32,7 @@ const config = {
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  globalSetup: require.resolve('./tests/setup.js'),
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
@@ -40,6 +41,11 @@ const config = {
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    baseURL: 'https://automationtesting.teamwork.com/',
+    headless: false,
+    viewport: { width: 1280, height: 720 },
+    ignoreHTTPSErrors: true,
+    screenshot: 'only-on-failure',
   },
 
   /* Configure projects for major browsers */
@@ -102,6 +108,10 @@ const config = {
   //   command: 'npm run start',
   //   port: 3000,
   // },
+
+
 };
 
 module.exports = config;
+
+

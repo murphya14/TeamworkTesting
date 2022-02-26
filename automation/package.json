@@ -9,6 +9,9 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.19.2",
-    "playwright": "^1.19.2"
+    "playwright": "^1.19.2",
+  "test": "npx playwright test", 
+  "test-debug": "PWDEBUG=1 npx playwright test", 
+  "test-debug-windows": "set PWDEBUG=1 && npx playwright test" 
   }
 }
